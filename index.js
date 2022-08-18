@@ -1,4 +1,4 @@
-document.getElementById("numbers").addEventListener("keypress", function (e) {
+document.getElementById("qtde").addEventListener("keypress", function (e) {
     if (e.key == "Enter") {
         criarInputs(e.target.value)
     }
@@ -23,12 +23,12 @@ function criarInputs(qtdes) {
 }
 
 function calcularMedia() {
-    const numeros = document.getElementById("numbers").value
+    const qtdes = document.getElementById("qtde").value
     var total = 0
 
-    for (let i = 0; i < numeros; i++) {
+    for (let i = 0; i < qtdes; i++) {
         total += parseInt(document.getElementById(`inp_${i}`).value)
     }
 
-    alert("média: " + total / numeros)
+    alert("média: " + total / qtdes)
 }
